@@ -3,15 +3,9 @@
 from django.shortcuts import render ,reverse
 from .models import Resume
 
+def home(request):
+    return render(request, 'index.html')
 
-def index(request):
-    experience = "Two years of experience in web development"
-    projects = ["Project A", "Project B", "Project C"]
-    context = {
-        'experience': experience,
-        'projects': projects
-    }
-    return render(request, 'base.html', context=context)
 
 
 def resume(request):
